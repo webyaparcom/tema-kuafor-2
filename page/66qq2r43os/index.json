@@ -1,0 +1,40 @@
+{
+  "id": "66qq2r43os",
+  "name": {
+    "tr": "Hizmetlerimiz",
+    "en": "Our services",
+    "ar": "خدماتنا"
+  },
+  "description": {
+    "tr": "Süreler saç boyuna ve yoğunluğuna göre değişir; fiyat bilgisi randevu sırasında verilir.",
+    "en": "Durations depend on hair length and thickness; prices are shared when you book.",
+    "ar": "تختلف المدة حسب طول الشعر وكثافته؛ وتُقدَّم الأسعار عند الحجز."
+  },
+  "keyword": {
+    "tr": "Hizmetler",
+    "en": "Services",
+    "ar": "الخدمات"
+  },
+  "path": "hizmetler",
+  "icon": "work",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "23zhw0",
+      "csrx9s"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Hizmetlerimiz",
+    "en": "Our services",
+    "ar": "خدماتنا"
+  },
+  "date": "2026-11-16T11:38:05.777Z",
+  "update": "2026-11-16T12:20:31.247Z"
+}
