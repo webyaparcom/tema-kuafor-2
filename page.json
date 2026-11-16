@@ -1,0 +1,166 @@
+{
+  "data": [
+    {
+      "id": "66qq2r43os",
+      "name": {
+        "tr": "Hizmetlerimiz",
+        "en": "Our services",
+        "ar": "خدماتنا"
+      },
+      "description": {
+        "tr": "Süreler saç boyuna ve yoğunluğuna göre değişir; fiyat bilgisi randevu sırasında verilir.",
+        "en": "Durations depend on hair length and thickness; prices are shared when you book.",
+        "ar": "تختلف المدة حسب طول الشعر وكثافته؛ وتُقدَّم الأسعار عند الحجز."
+      },
+      "path": "hizmetler",
+      "icon": "work",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "23zhw0",
+          "csrx9s"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Salonumuz",
+        "en": "Our salon",
+        "ar": "صالوننا"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "info",
+      "desing": {
+        "header": [],
+        "body": [
+          "y4gkrc",
+          "zmiq22",
+          "mgrqav"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Puanlarımız, müşteri deneyimleri ve kullandığımız markalar (kurgusal).",
+        "en": "Our ratings, client experiences and the brands we use (fictional).",
+        "ar": "تقييماتنا وتجارب العملاء والعلامات التي نستخدمها (افتراضية)."
+      }
+    },
+    {
+      "id": "e2mn73l4aw",
+      "name": {
+        "tr": "Stilistler",
+        "en": "Stylists",
+        "ar": "المصففون"
+      },
+      "description": {
+        "tr": "Sizi karşılayan çalışanlarımız.",
+        "en": "The staff who welcomes you.",
+        "ar": "الموظفون الذين يستقبلونكم."
+      },
+      "path": "ekip",
+      "icon": "groups",
+      "category": "hakkimizda",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "v7lcm7",
+          "csrx9s"
+        ],
+        "footer": []
+      },
+      "index": 2
+    },
+    {
+      "id": "0phwc9gpam",
+      "name": {
+        "tr": "Ziyaret rehberi",
+        "en": "Visit guide",
+        "ar": "دليل الزيارة"
+      },
+      "description": {
+        "tr": "Merak edilenler ve kısa yanıtlar.",
+        "en": "Common questions and short answers.",
+        "ar": "أسئلة متكررة وإجابات موجزة."
+      },
+      "path": "sorular",
+      "icon": "help",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "mj15pb",
+          "csrx9s"
+        ],
+        "footer": []
+      },
+      "index": 3
+    },
+    {
+      "id": "mq7w2zkvq0",
+      "name": {
+        "tr": "Randevu",
+        "en": "Booking",
+        "ar": "الحجز"
+      },
+      "description": {
+        "tr": "Randevu ve özel danışma talebi (demo).",
+        "en": "Booking and private consultation request (demo).",
+        "ar": "طلب حجز واستشارة خاصة (تجريبي)."
+      },
+      "path": "teklif-al",
+      "icon": "request_quote",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "csrx9s",
+          "sn90a2"
+        ],
+        "footer": []
+      },
+      "index": 4
+    },
+    {
+      "name": {
+        "tr": "İletişim",
+        "en": "Contact",
+        "ar": "اتصل بنا"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 5,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "sn90a2",
+          "k8mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Adres, telefon ve çalışma saatleri.",
+        "en": "Address, phone and opening hours.",
+        "ar": "العنوان والهاتف وساعات العمل."
+      }
+    }
+  ],
+  "desc": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "mq7w2zkvq0",
+  "name": {
+    "tr": "Randevu",
+    "en": "Booking",
+    "ar": "الحجز"
+  },
+  "description": {
+    "tr": "Randevu ve özel danışma talebi (demo).",
+    "en": "Booking and private consultation request (demo).",
+    "ar": "طلب حجز واستشارة خاصة (تجريبي)."
+  },
+  "keyword": {
+    "tr": "randevu, gelin saçı",
+    "en": "booking, bridal hair",
+    "ar": "حجز، تسريحة عروس"
+  },
+  "path": "teklif-al",
+  "icon": "request_quote",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "csrx9s",
+      "sn90a2"
+    ],
+    "footer": []
+  },
+  "index": 4,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Randevu",
+    "en": "Booking",
+    "ar": "الحجز"
+  },
+  "date": "2026-11-16T11:38:05.795Z",
+  "update": "2026-11-16T12:20:31.260Z"
+}

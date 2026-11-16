@@ -1,0 +1,399 @@
+<header class="modulex-header" role="banner">
+  <div class="modulex-header-inner">
+    <div class="modulex-header-brand">
+      <a href="/{{lang}}/" class="modulex-header-logo" aria-label="@home@ - {{web-name}}">
+        <img src="/img/{{logo}}?v={{random}}" alt="{{web-name}} Logo" />
+      </a>
+    </div>
+    
+    <button class="modulex-header-toggle" type="button" aria-label="@menu-toggle@" aria-expanded="false" aria-controls="modulex-header-nav">
+      <span class="modulex-header-toggle-icon"></span>
+    </button>
+    
+    <!-- Mobil uygulama kuralı (12 Kas 2026): menü SOLDAN açılan çekmece -->
+    <div class="modulex-header-backdrop" aria-hidden="true"></div>
+    <nav class="modulex-header-nav" id="modulex-header-nav" role="navigation" aria-label="@navigation@">
+      <button class="modulex-header-close" type="button" aria-label="@menu-close@">
+        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      </button>
+      <ul class="modulex-header-menu" role="menubar">
+        {{html}}
+      </ul>
+      
+      <div class="modulex-header-langs" role="list" aria-label="@language-selector@">
+        {{langhtml}}
+      </div>
+    </nav>
+  </div>
+</header>
+<style>
+  .modulex-header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .modulex-header-inner {
+    max-width: --max--;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .modulex-header-brand {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .modulex-header-logo {
+    display: block;
+    height: --height--;
+    max-width: min(90vw, 280px);
+    min-width: 0;
+    flex-shrink: 1;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .modulex-header-logo:hover {
+    transform: scale(1.05);
+  }
+
+  .modulex-header-logo img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  /* SVG logo korumasi (2026-09-13): SVG'de width/height yoksa (yalniz
+     viewBox) <img> intrinsic boyut tasimaz. Bu modulde ayrica sarmalayici
+     `height: --height--` sablonu kullaniyor; sablon BOS gelirse kural
+     duser, sarmalayici auto olur ve `height:100%` hicbir seye cozulmez.
+     Acik yukseklik ikisini de kapatir. */
+  .modulex-header-logo img[src*=".svg"] {
+    height: 60px;
+    width: auto;
+  }
+
+  .modulex-header-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    min-width: 48px;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modulex-header-close,
+  .modulex-header-backdrop {
+    display: none;
+  }
+
+  .modulex-header-toggle-icon {
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background: --color--;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    display: block;
+  }
+
+  .modulex-header-toggle-icon::before,
+  .modulex-header-toggle-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: --color--;
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .modulex-header-toggle-icon::before { top: -7px; }
+  .modulex-header-toggle-icon::after { top: 7px; }
+
+  .modulex-header-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .modulex-header-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .modulex-header-menu a {
+    color: --color--;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    position: relative;
+  }
+
+  .modulex-header-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 2px;
+    background: --button--;
+    transition: transform 0.3s ease;
+  }
+
+  .modulex-header-menu a:hover {
+    color: --button--;
+    background: rgba(37, 99, 235, 0.08);
+  }
+
+  .modulex-header-menu a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .modulex-header-menu a.modulexmenuactive {
+    color: --button--;
+    background: rgba(37, 99, 235, 0.12);
+    font-weight: 600;
+  }
+
+  .modulex-header-menu a.modulexmenuactive::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .modulex-header-langs {
+    display: flex;
+    gap: 8px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .modulex-header-langs a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: --color--;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .modulex-header-langs a:hover {
+    background: --button--;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .modulex-header-langs a[aria-current="true"] {
+    background: --button--;
+    color: #fff;
+  }
+
+  @media (max-width: 1024px) {
+    .modulex-header-toggle {
+      display: flex;
+    }
+
+    /* header'daki backdrop-filter position:fixed için kapsayıcı kutu yaratır → çekmece header'a sıkışırdı; mobilde kapalı */
+    .modulex-header {
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    .modulex-header-inner {
+      justify-content: flex-start;
+      gap: 8px;
+    }
+
+    .modulex-header-toggle {
+      order: -1; /* hamburger solda, çekmece de soldan açılır */
+    }
+
+    /* SOL ÇEKMECE (kural 11 Kas 2026: sağda değil SOLDA; RTL'de aynası) */
+    .modulex-header-nav {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      inset-inline-start: 0;
+      transform: translateX(calc(-100% - 40px));
+      visibility: hidden;
+      width: min(86vw, 320px);
+      height: auto;
+      background: #fff;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 64px 24px calc(24px + env(safe-area-inset-bottom, 0px));
+      transition: transform 0.3s ease, visibility 0s linear 0.3s;
+      box-shadow: 5px 0 30px rgba(0, 0, 0, 0.15);
+      z-index: 10000;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    [dir="rtl"] .modulex-header-nav {
+      transform: translateX(calc(100% + 40px));
+    }
+
+    .modulex-header-nav.active,
+    [dir="rtl"] .modulex-header-nav.active {
+      transform: none;
+      visibility: visible;
+      transition: transform 0.3s ease, visibility 0s;
+    }
+
+    .modulex-header-close {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 8px;
+      inset-inline-end: 8px;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: --color--;
+      cursor: pointer;
+    }
+
+    .modulex-header-backdrop.active {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .modulex-header-menu {
+      flex-direction: column;
+      width: 100%;
+      gap: 5px;
+    }
+
+    .modulex-header-menu a {
+      width: 100%;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 14px 18px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    .modulex-header-langs a {
+      width: 48px;
+      height: 48px;
+    }
+
+    .modulex-header-langs {
+      border-left: none;
+      padding-left: 0;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      justify-content: center;
+    }
+
+    .modulex-header-inner {
+      height: 70px;
+    }
+
+    .modulex-header-logo {
+      max-width: min(50vw, 200px);
+    }
+
+    .modulex-header-logo img {
+      max-height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .modulex-header-logo {
+      max-width: min(40vw, 180px);
+    }
+
+    .modulex-header-logo img {
+      max-height: 55px;
+    }
+  }
+
+  /* W2: mobil tasma kontrolu */
+  @media (max-width: 768px) {
+    [class*="modulex"] {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  /* W2: erisilebilirlik — animasyon kapatma */
+  @media (prefers-reduced-motion: reduce) {
+    [class*="modulex"],
+    [class*="modulex"] * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+</style>
+<script>
+  setTimeout(function() {
+    var toggle = document.querySelector('.modulex-header-toggle');
+    var nav = document.querySelector('.modulex-header-nav');
+    var backdrop = document.querySelector('.modulex-header-backdrop');
+    var closeBtn = document.querySelector('.modulex-header-close');
+
+    if (toggle && nav) {
+      var ayarla = function(ac) {
+        nav.classList[ac ? 'add' : 'remove']('active');
+        if (backdrop) { backdrop.classList[ac ? 'add' : 'remove']('active'); }
+        toggle.setAttribute('aria-expanded', ac ? 'true' : 'false');
+        document.body.style.overflow = ac ? 'hidden' : '';
+      };
+      toggle.addEventListener('click', function() {
+        ayarla(!nav.classList.contains('active'));
+      });
+      if (closeBtn) { closeBtn.addEventListener('click', function() { ayarla(false); toggle.focus(); }); }
+      if (backdrop) { backdrop.addEventListener('click', function() { ayarla(false); }); }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && nav.classList.contains('active')) { ayarla(false); toggle.focus(); }
+      });
+      nav.addEventListener('click', function(e) {
+        var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+        if (a) { ayarla(false); }
+      });
+    }
+  }, 100);
+</script>

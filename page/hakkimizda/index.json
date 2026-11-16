@@ -1,0 +1,48 @@
+{
+  "name": {
+    "tr": "Salonumuz",
+    "en": "Our salon",
+    "ar": "صالوننا"
+  },
+  "status": "play",
+  "category": "",
+  "id": "hakkimizda",
+  "url": "",
+  "path": "hakkimizda",
+  "index": 1,
+  "icon": "info",
+  "desing": {
+    "header": [],
+    "body": [
+      "y4gkrc",
+      "zmiq22",
+      "mgrqav"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Puanlarımız, müşteri deneyimleri ve kullandığımız markalar (kurgusal).",
+    "en": "Our ratings, client experiences and the brands we use (fictional).",
+    "ar": "تقييماتنا وتجارب العملاء والعلامات التي نستخدمها (افتراضية)."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Salonumuz",
+    "en": "Our salon",
+    "ar": "صالوننا"
+  },
+  "keyword": {
+    "tr": "hakkımızda",
+    "en": "about",
+    "ar": "من نحن"
+  },
+  "text": {},
+  "update": "2026-11-16T12:20:31.250Z",
+  "date": "2026-10-30"
+}

@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Lina Saç Stüdyosu: kesim, renk, örgü ve gelin saçı için çevrim içi randevu. Demo site; içerik kurgusaldır.",
+    "en": "Lina Hair Studio: online booking for cuts, colour, braids and bridal hair. Demo site; content is fictional.",
+    "ar": "استوديو لينا للشعر: حجز عبر الإنترنت للقص والصبغ والضفائر وتسريحات العرائس. موقع تجريبي؛ المحتوى افتراضي."
+  },
+  "keyword": {
+    "tr": "kuaför, saç kesimi, saç boyama, gelin saçı, randevu",
+    "en": "hair salon, haircut, hair colour, bridal hair, booking",
+    "ar": "صالون شعر، قص الشعر، صبغ الشعر، تسريحة عروس، حجز"
+  },
+  "category": "Kurumsal",
+  "name": "Lina Saç Stüdyosu",
+  "domain": "kuafor-2.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "noto-sans",
+    "heading": "dm-serif-display",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-kufi-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#6E4A5A",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "8px",
+    "--mx-radius-md": "14px",
+    "--mx-radius-lg": "20px",
+    "--mx-radius-xl": "27px"
+  },
+  "icon": "icon.png"
+}

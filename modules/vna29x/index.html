@@ -1,0 +1,588 @@
+<header class="mnu1-bar" role="banner" dir="ltr" data-mnu1-kok>
+  <div class="mnu1-ic">
+    <a class="mnu1-marka" href="/{{lang}}/" aria-label="@home@ - {{web-name}}" title="@home@ - {{web-name}}">
+      <img src="/img/{{logo}}?v={{random}}" class="mnu1-logo" alt="{{web-name}} Logo" />
+      <span class="mnu1-ad" data-mnu1-ad="--siteadi--" dir="auto">{{web-name}}</span>
+    </a>
+    <nav class="mnu1-nav" aria-label="@navigation@">
+      <ul class="mnu1-linkler">{{html}}</ul>
+    </nav>
+    <div class="mnu1-sag">
+      <ul class="mnu1-diller" aria-label="@language-selector@">{{langhtml}}</ul>
+      <a class="mnu1-giris" href="{{mnu1girishref}}" data-mnu1-misafir dir="auto">{{loginText}}</a>
+      <div class="mnu1-uye" data-mnu1-uye hidden>
+        <button type="button" class="mnu1-cip" aria-expanded="false" aria-controls="mnu1-dropdown" aria-label="{{uyeAria}}">
+          <span class="mnu1-avatar" data-mnu1-bas aria-hidden="true"></span>
+          <span class="mnu1-isim" data-mnu1-isim dir="auto"></span>
+          <svg class="mnu1-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="mnu1-dropdown" id="mnu1-dropdown" hidden>
+          <div class="mnu1-kartbas">
+            <span class="mnu1-avatar" data-mnu1-bas aria-hidden="true"></span>
+            <span class="mnu1-kimlik">
+              <span class="mnu1-isim" data-mnu1-isim dir="auto"></span>
+              <span class="mnu1-eposta" data-mnu1-eposta dir="ltr"></span>
+            </span>
+          </div>
+          <ul class="mnu1-uyelinkler">{{mnu1uyelinkler}}</ul>
+          <hr class="mnu1-ayrac" />
+          <button type="button" class="mnu1-cikis" data-mnu1-cikis dir="auto">{{cikisText}}</button>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="mnu1-hamburger" aria-expanded="false" aria-haspopup="dialog" aria-controls="mnu1-drawer" aria-label="@menu-toggle@">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div class="mnu1-ortu" data-mnu1-ortu hidden></div>
+  <div class="mnu1-drawer" id="mnu1-drawer" role="dialog" aria-modal="true" aria-label="@navigation@" aria-hidden="true">
+    <div class="mnu1-drawerbas">
+      <button type="button" class="mnu1-kapat" aria-label="@menu-close@">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="mnu1-bolum" aria-label="@navigation@">
+      <ul class="mnu1-linkler mnu1-drawerlinkler">{{html}}</ul>
+    </nav>
+    <hr class="mnu1-ayrac mnu1-drawerayrac" />
+    <div class="mnu1-bolum mnu1-drawersag">
+      <ul class="mnu1-diller mnu1-drawerdiller" aria-label="@language-selector@">{{langhtml}}</ul>
+      <a class="mnu1-giris mnu1-tam" href="{{mnu1girishref}}" data-mnu1-misafir dir="auto">{{loginText}}</a>
+    </div>
+    <div class="mnu1-draweruye" data-mnu1-uye hidden>
+      <div class="mnu1-kartbas">
+        <span class="mnu1-avatar" data-mnu1-bas aria-hidden="true"></span>
+        <span class="mnu1-kimlik">
+          <span class="mnu1-isim" data-mnu1-isim dir="auto"></span>
+          <span class="mnu1-eposta" data-mnu1-eposta dir="ltr"></span>
+        </span>
+      </div>
+      <ul class="mnu1-uyelinkler">{{mnu1uyelinkler}}</ul>
+      <button type="button" class="mnu1-cikis mnu1-cikistam" data-mnu1-cikis dir="auto">{{cikisText}}</button>
+    </div>
+  </div>
+</header>
+<style>
+  /* Menü Portal 1 — sınıf öneki sabit mnu1- (motorun bölüm son eki dönüşümüne girmez; sayfada tek kopya varsayılır) */
+  .mnu1-bar {
+    --mnu1-zemin: --menubg--;
+    --mnu1-yazi: --menutext--;
+    --mnu1-hover: --menuhoverbg--;
+    --mnu1-vurgu: --accent--;
+    --mnu1-cizgi: color-mix(in srgb, var(--mnu1-yazi) 10%, transparent);
+    --mnu1-soluk: color-mix(in srgb, var(--mnu1-yazi) 62%, transparent);
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    background: var(--mnu1-zemin);
+    color: var(--mnu1-yazi);
+    border-bottom: 1px solid var(--mnu1-cizgi);
+    box-sizing: border-box;
+  }
+  .mnu1-bar *, .mnu1-bar *::before, .mnu1-bar *::after { box-sizing: border-box; }
+  .mnu1-bar [hidden] { display: none !important; }
+  .mnu1-bar ul { list-style: none; margin: 0; padding: 0; }
+  .mnu1-bar a:focus-visible, .mnu1-bar button:focus-visible {
+    outline: 2px solid var(--mnu1-vurgu);
+    outline-offset: 2px;
+  }
+  /* nefes: logo · nav · sağ grup arasında 28px; kap konumlu → üye kartı barın altına hizalanır */
+  .mnu1-ic {
+    position: relative;
+    width: min(100%, var(--max, 1280px));
+    height: --height--;
+    min-height: 72px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .mnu1-marka {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    flex: none;
+    color: inherit;
+    text-decoration: none;
+  }
+  .mnu1-logo {
+    display: block;
+    height: 36px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+    object-position: left center;
+  }
+  .mnu1-ad { font-size: 18px; font-weight: 700; white-space: nowrap; }
+  /* siteadi=gizli: logo zaten yazı-logosuysa ad ikilenmesin; ekran okuyucu bağlantı etiketinden okur */
+  .mnu1-ad[data-mnu1-ad="gizli"] {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  }
+  .mnu1-nav { flex: 1; min-width: 0; display: flex; justify-content: center; }
+  /* linkler nav alanına eşit yayılır: boşluk kadar nefes alır, en az 8px kutu aralığı + 12px iç boşluk → yazılar arası ≥32px; asla taşmaz */
+  .mnu1-linkler { display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; max-width: 760px; }
+  .mnu1-link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 8px;
+    transition: color 0.2s ease;
+  }
+  .mnu1-link:hover { color: var(--mnu1-vurgu); }
+  /* hover: kırmızı altçizgi soldan kayar; aktif sayfada kalın ve sabit */
+  .mnu1-link::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 4px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--mnu1-vurgu);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .mnu1-link:hover::after, .mnu1-link:focus-visible::after { transform: scaleX(1); }
+  .mnu1-link.mnu1-aktif { color: var(--mnu1-vurgu); font-weight: 700; }
+  .mnu1-link.mnu1-aktif::after { height: 3px; transform: scaleX(1); }
+  /* sağ grup: dil seçici (segment pill) ve giriş düğmesi ayrı iki nesne, aralarında 16px */
+  .mnu1-sag { display: flex; align-items: center; gap: 16px; flex: none; }
+  .mnu1-diller {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 3px;
+    border: 1px solid var(--mnu1-cizgi);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--mnu1-yazi) 6%, transparent);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .mnu1-diller:empty { display: none; }
+  .mnu1-diller li { display: flex; }
+  .mnu1-dil {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    padding: 8px 9px;
+    border-radius: 999px;
+    color: var(--mnu1-soluk);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .mnu1-dil:hover { color: var(--mnu1-yazi); background: var(--mnu1-hover); }
+  .mnu1-dil.mnu1-dil-aktif { background: var(--mnu1-vurgu); color: var(--mx-site-primary-contrast, #fff); }
+  .mnu1-giris {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: var(--mnu1-vurgu);
+    color: var(--mx-site-primary-contrast, #fff);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .mnu1-giris:hover {
+    background: color-mix(in srgb, var(--mnu1-vurgu) 84%, #000);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px color-mix(in srgb, var(--mnu1-vurgu) 28%, transparent);
+  }
+  .mnu1-giris:active { transform: none; box-shadow: none; }
+  /* konum .mnu1-ic'e bırakılır: açılır kart barın alt kenarına hizalanır, öğelerin üstüne biner */
+  .mnu1-uye { position: static; }
+  .mnu1-cip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 10px 4px 4px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .mnu1-cip:hover, .mnu1-cip[aria-expanded="true"] { background: var(--mnu1-hover); }
+  .mnu1-chevron { transition: transform 0.2s ease; }
+  .mnu1-cip[aria-expanded="true"] .mnu1-chevron { transform: rotate(180deg); }
+  .mnu1-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--mnu1-vurgu);
+    color: var(--mx-site-primary-contrast, #fff);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .mnu1-isim {
+    font-size: 14px;
+    font-weight: 600;
+    max-width: 96px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .mnu1-dropdown {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 24px;
+    min-width: 240px;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid var(--mnu1-cizgi);
+    background: var(--mnu1-zemin);
+    color: var(--mnu1-yazi);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14), 0 2px 6px rgba(0, 0, 0, 0.08);
+    z-index: 1001;
+    animation: mnu1-belir 160ms ease-out;
+  }
+  @keyframes mnu1-belir { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  .mnu1-kartbas { display: flex; align-items: center; gap: 10px; padding: 8px 10px 10px; }
+  .mnu1-kimlik { display: flex; flex-direction: column; min-width: 0; }
+  .mnu1-kimlik .mnu1-isim { max-width: 200px; }
+  .mnu1-eposta {
+    font-size: 12px;
+    color: var(--mnu1-soluk);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+  }
+  .mnu1-uyelink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .mnu1-uyelink:hover { background: color-mix(in srgb, var(--mnu1-yazi) 5%, transparent); }
+  .mnu1-ikon { flex: none; color: var(--mnu1-soluk); }
+  .mnu1-ayrac { border: 0; border-top: 1px solid var(--mnu1-cizgi); margin: 6px 0; width: 100%; }
+  .mnu1-cikis {
+    display: block;
+    width: 100%;
+    padding: 9px 10px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--mnu1-vurgu);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: start;
+    cursor: pointer;
+  }
+  .mnu1-cikis:hover { background: color-mix(in srgb, var(--mnu1-vurgu) 8%, transparent); }
+  .mnu1-cikis:disabled { opacity: 0.6; cursor: progress; }
+  .mnu1-hamburger, .mnu1-ortu, .mnu1-drawer { display: none; }
+
+  /* Dar masaüstü (1200–1279): aynı düzen, boşluklar bir kademe kısılır; kutular yine değmez */
+  @media (min-width: 1200px) and (max-width: 1279.98px) {
+    .mnu1-ic { gap: 24px; padding: 0 20px; }
+    .mnu1-logo { max-width: 150px; height: 32px; }
+    .mnu1-link { padding: 10px 10px; }
+    .mnu1-link::after { left: 10px; right: 10px; }
+    .mnu1-sag { gap: 12px; }
+    .mnu1-giris { padding: 10px 16px; }
+    .mnu1-dropdown { right: 20px; }
+  }
+
+  /* Dar (<1200): yedi link + dil + giriş nefes alarak sığmaz → 68px bar, hamburger, sağdan bölümlü çekmece */
+  @media (max-width: 1199.98px) {
+    .mnu1-ic { height: 68px; min-height: 0; padding: 0 12px 0 16px; gap: 12px; }
+    .mnu1-nav, .mnu1-sag { display: none; }
+    .mnu1-marka { flex: 1; }
+    .mnu1-logo { height: 34px; max-width: 160px; }
+    .mnu1-ad { font-size: 16px; }
+    .mnu1-hamburger {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      margin-left: auto;
+      padding: 0;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+    }
+    .mnu1-hamburger:hover { background: var(--mnu1-hover); }
+    .mnu1-ortu {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 10000000;
+    }
+    .mnu1-drawer {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: min(340px, 88%);
+      height: 100%;
+      height: 100dvh;
+      padding: 10px 20px 28px;
+      overflow-y: auto;
+      background: var(--mnu1-zemin);
+      color: var(--mnu1-yazi);
+      box-shadow: 8px 0 24px rgba(0, 0, 0, 0.18);
+      z-index: 10000001;
+      transform: translateX(-100%);
+      visibility: hidden;
+      transition: transform 0.25s ease, visibility 0s linear 0.25s;
+    }
+    .mnu1-drawer.mnu1-acik { transform: none; visibility: visible; transition: transform 0.25s ease; }
+    .mnu1-drawerbas { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+    .mnu1-kapat {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border: 0;
+      border-radius: 10px;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+    }
+    .mnu1-kapat:hover { background: var(--mnu1-hover); }
+    /* 1) sayfa linkleri: tam genişlik, ≥48px satır, aktif/hover vurgu zemini + sol çizgi */
+    .mnu1-drawerlinkler { flex-direction: column; align-items: stretch; gap: 4px; }
+    .mnu1-drawerlinkler .mnu1-link {
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 12px 16px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+    .mnu1-drawerlinkler .mnu1-link:hover { background: var(--mnu1-hover); }
+    .mnu1-drawerlinkler .mnu1-link.mnu1-aktif { background: var(--mnu1-hover); }
+    .mnu1-drawerlinkler .mnu1-link::after { left: auto; right: auto; inset-inline-start: 0; top: 12px; bottom: 12px; width: 3px; height: auto; transform: scaleY(0); transform-origin: center; }
+    .mnu1-drawerlinkler .mnu1-link:hover::after, .mnu1-drawerlinkler .mnu1-link:focus-visible::after { transform: scaleY(1); }
+    .mnu1-drawerlinkler .mnu1-link.mnu1-aktif::after { width: 3px; height: auto; transform: scaleY(1); }
+    /* 2) ayraç */
+    .mnu1-drawerayrac { margin: 12px 0; }
+    /* 3) dil seçici geniş segment · 4) tam genişlik giriş düğmesi */
+    .mnu1-drawersag { display: flex; flex-direction: column; gap: 16px; }
+    .mnu1-drawerdiller { width: 100%; padding: 4px; font-size: 14px; }
+    .mnu1-drawerdiller li { flex: 1; }
+    .mnu1-drawerdiller .mnu1-dil { flex: 1; min-height: 44px; }
+    .mnu1-tam { display: flex; width: 100%; min-height: 52px; padding: 14px 18px; font-size: 16px; border-radius: 12px; }
+    /* 5) üye kartı + linkler + Çıkış */
+    .mnu1-draweruye { display: flex; flex-direction: column; gap: 4px; margin-top: 16px; }
+    .mnu1-draweruye .mnu1-kartbas {
+      padding: 12px;
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--mnu1-yazi) 6%, transparent);
+      margin-bottom: 4px;
+    }
+    .mnu1-draweruye .mnu1-isim { max-width: 210px; font-size: 15px; }
+    .mnu1-draweruye .mnu1-uyelink { min-height: 48px; padding: 12px 16px; font-size: 15px; border-radius: 10px; }
+    .mnu1-cikistam {
+      margin-top: 12px;
+      min-height: 52px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      background: var(--mnu1-vurgu);
+      color: var(--mx-site-primary-contrast, #fff);
+      text-align: center;
+    }
+    .mnu1-cikistam:hover { background: color-mix(in srgb, var(--mnu1-vurgu) 84%, #000); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mnu1-bar *, .mnu1-bar *::before, .mnu1-bar *::after { animation: none !important; transition: none !important; }
+    .mnu1-giris:hover { transform: none; }
+  }
+
+  /* Mobil uygulama kuralı (12 Kas 2026): dokunma hedefleri >= 48px (yalnız <=1024px; referans modülün görünümü/çekmece yönü aynı) */
+  @media (max-width: 1024px) {
+    .mnu1-marka,
+    .mnu1-dil,
+    .mnu1-drawerdiller .mnu1-dil {
+      min-height: 48px;
+      box-sizing: border-box;
+    }
+
+    .mnu1-marka {
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+</style>
+<script>
+  /* Menü Portal 1: üye durumu (/api/portal/ben, tek istek) + çekmece + üye listesi. Kullanıcı verisi yalnız textContent ile yazılır. */
+  (function () {
+    var kok = document.querySelector("[data-mnu1-kok]");
+    if (!kok || kok.getAttribute("data-mnu1-bagli")) return;
+    kok.setAttribute("data-mnu1-bagli", "1");
+    var belge = document.documentElement;
+    var hamburger = kok.querySelector(".mnu1-hamburger");
+    var drawer = kok.querySelector(".mnu1-drawer");
+    var ortu = kok.querySelector("[data-mnu1-ortu]");
+    var kapat = kok.querySelector(".mnu1-kapat");
+    var cip = kok.querySelector(".mnu1-cip");
+    var dropdown = kok.querySelector(".mnu1-dropdown");
+    var eskiTasma = "";
+
+    function her(secici, fn) {
+      var l = document.querySelectorAll(secici);
+      for (var i = 0; i < l.length; i++) fn(l[i]);
+    }
+
+    function cekmeceAcik() { return drawer.classList.contains("mnu1-acik"); }
+    function cekmeceAc() {
+      drawer.classList.add("mnu1-acik");
+      drawer.setAttribute("aria-hidden", "false");
+      ortu.hidden = false;
+      hamburger.setAttribute("aria-expanded", "true");
+      eskiTasma = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      kapat.focus();
+    }
+    function cekmeceKapat(odakla) {
+      if (!cekmeceAcik()) return;
+      drawer.classList.remove("mnu1-acik");
+      drawer.setAttribute("aria-hidden", "true");
+      ortu.hidden = true;
+      hamburger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = eskiTasma;
+      if (odakla) hamburger.focus();
+    }
+
+    function listeAcik() { return !dropdown.hidden; }
+    function listeAc() {
+      dropdown.hidden = false;
+      cip.setAttribute("aria-expanded", "true");
+    }
+    function listeKapat(odakla) {
+      if (!listeAcik()) return;
+      dropdown.hidden = true;
+      cip.setAttribute("aria-expanded", "false");
+      if (odakla) cip.focus();
+    }
+
+    /* odak tuzağı: çekmece açıkken Tab/Shift+Tab içeride döner (aria-modal) */
+    function odaklanabilir() {
+      var l = drawer.querySelectorAll("a[href], button:not([disabled])");
+      var s = [];
+      for (var i = 0; i < l.length; i++) {
+        if (!l[i].closest("[hidden]") && l[i].getClientRects().length) s.push(l[i]);
+      }
+      return s;
+    }
+    drawer.addEventListener("keydown", function (e) {
+      if (e.key !== "Tab" || !cekmeceAcik()) return;
+      var s = odaklanabilir();
+      if (!s.length) return;
+      var ilk = s[0], son = s[s.length - 1];
+      if (e.shiftKey && (document.activeElement === ilk || !drawer.contains(document.activeElement))) { e.preventDefault(); son.focus(); }
+      else if (!e.shiftKey && (document.activeElement === son || !drawer.contains(document.activeElement))) { e.preventDefault(); ilk.focus(); }
+    });
+
+    hamburger.addEventListener("click", function () {
+      if (cekmeceAcik()) cekmeceKapat(true); else cekmeceAc();
+    });
+    kapat.addEventListener("click", function () { cekmeceKapat(true); });
+    ortu.addEventListener("click", function () { cekmeceKapat(true); });
+    cip.addEventListener("click", function () {
+      if (listeAcik()) listeKapat(false); else listeAc();
+    });
+    document.addEventListener("click", function (e) {
+      if (listeAcik() && !cip.parentNode.contains(e.target)) listeKapat(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      if (listeAcik()) listeKapat(true);
+      if (cekmeceAcik()) cekmeceKapat(true);
+    });
+    /* masaüstüne geçilirse açık çekmece kapanır, gövde kilidi kalmaz */
+    if (window.matchMedia) {
+      var genis = window.matchMedia("(min-width: 1200px)");
+      var genisDinle = function (m) { if (m.matches) cekmeceKapat(false); };
+      if (genis.addEventListener) genis.addEventListener("change", genisDinle); else if (genis.addListener) genis.addListener(genisDinle);
+    }
+
+    function uyeAc(v) {
+      var eposta = String(v.kullanici.eposta || "");
+      var isim = String((v.cari && (v.cari.yetkili || v.cari.unvan)) || eposta).trim();
+      var ilk = Array.from(isim)[0] || "?";
+      var bas = ilk.toLocaleUpperCase(belge.lang || undefined);
+      her("[data-mnu1-isim]", function (e) { e.textContent = isim; });
+      her("[data-mnu1-eposta]", function (e) { e.textContent = eposta; });
+      her("[data-mnu1-bas]", function (e) { e.textContent = bas; });
+      her("[data-mnu1-misafir]", function (e) { e.hidden = true; });
+      her("[data-mnu1-uye]", function (e) { e.hidden = false; });
+    }
+
+    function cikis(e) {
+      var b = e.currentTarget;
+      b.disabled = true;
+      var dil = /^[a-z]{2}$/.test(belge.lang || "") ? belge.lang : "";
+      fetch("/api/portal/cikis", { method: "POST", credentials: "same-origin", headers: { accept: "application/json" } })
+        .catch(function () {})
+        .then(function () {
+          setTimeout(function () { window.location.href = "/" + (dil ? dil + "/" : ""); }, 300);
+        });
+    }
+    her("[data-mnu1-cikis]", function (b) { b.addEventListener("click", cikis); });
+
+    function uyeSor() {
+      if (!window.fetch) return;
+      fetch("/api/portal/ben", { credentials: "same-origin", headers: { accept: "application/json" } })
+        .then(function (r) {
+          var tur = r.headers.get("content-type") || "";
+          return r.ok && tur.indexOf("json") !== -1 ? r.json() : null;
+        })
+        .then(function (d) {
+          /* portal sözleşmesi { ok, data: {kullanici, cari, …} }; düz şekil de kabul. ok:false → misafir */
+          if (!d || d.ok === false) return;
+          var v = d.data && typeof d.data === "object" ? d.data : d;
+          if (v && v.kullanici) uyeAc(v);
+        })
+        .catch(function () {});
+    }
+    /* render'ı bloklamaz: tarayıcı boşa düşünce (en geç 1,5 sn) sorulur */
+    var bosta = window.requestIdleCallback
+      ? function (f) { window.requestIdleCallback(f, { timeout: 1500 }); }
+      : function (f) { setTimeout(f, 1); };
+    if (document.readyState !== "complete") {
+      window.addEventListener("load", function () { bosta(uyeSor); });
+    } else {
+      bosta(uyeSor);
+    }
+  })();
+</script>

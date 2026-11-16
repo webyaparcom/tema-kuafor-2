@@ -1,0 +1,67 @@
+{
+  "name": "Menü Portal 1",
+  "desing": {
+    "menubg": "#ffffff",
+    "menutext": "#1b1b1b",
+    "menuhoverbg": "rgba(0, 0, 0, 0.05)",
+    "logo": "logo.png",
+    "height": "72px",
+    "accent": "#CC1F1B",
+    "siteadi": "gizli",
+    "girishref": "login",
+    "loginText": {
+      "tr": "Üye Girişi",
+      "en": "Login",
+      "ar": "تسجيل الدخول"
+    },
+    "panoText": {
+      "tr": "Pano",
+      "en": "Dashboard",
+      "ar": "لوحة"
+    },
+    "bakiyeText": {
+      "tr": "Bakiye & Hizmetler",
+      "en": "Balance & Services",
+      "ar": "الرصيد والخدمات"
+    },
+    "faturalarText": {
+      "tr": "Faturalar",
+      "en": "Invoices",
+      "ar": "الفواتير"
+    },
+    "odemeText": {
+      "tr": "Ödeme",
+      "en": "Payment",
+      "ar": "الدفع"
+    },
+    "taleplerText": {
+      "tr": "Talepler",
+      "en": "Requests",
+      "ar": "الطلبات"
+    },
+    "profilText": {
+      "tr": "Profil",
+      "en": "Profile",
+      "ar": "الملف الشخصي"
+    },
+    "cikisText": {
+      "tr": "Çıkış",
+      "en": "Log out",
+      "ar": "خروج"
+    },
+    "uyeAria": {
+      "tr": "Üye menüsü",
+      "en": "Member menu",
+      "ar": "قائمة العضو"
+    }
+  },
+  "category": "menu",
+  "description": "Beyaz üst bar + /<dil>/user üye portalı bağlantısı (giriş /<dil>/login). Solda logo, ortada sayfa linkleri (kayan vurgu altçizgisi, aktif sayfa kalın), sağda TR·EN·AR dil çubuğu ve üye bloğu: oturum yoksa «Üye Girişi» düğmesi (girishref), oturum varsa GET /api/portal/ben ile ad + avatar çipi ve açılır üye listesi (Pano · Bakiye & Hizmetler · Faturalar · Ödeme · Talepler · Profil · Çıkış → POST /api/portal/cikis). 1200px altında 68px bar + sağdan bölümlü çekmece (linkler · dil pill · giriş · üye); masaüstünde dil seçici segment pill, giriş düğmesi ayrı. menubg/menutext/menuhoverbg: zemin/yazı/hover örtüsü; accent: vurgu (düğme, altçizgi, avatar); height: masaüstü bar yüksekliği; siteadi: gizli|goster (logo yazı-logosuysa gizli); *Text/uyeAria: tr/en/ar metinler. Kullanıcı verisi yalnız textContent ile yazılır; MxStore/localStorage kullanılmaz.",
+  "version": "1.0.0",
+  "icon": "menu",
+  "veri": {
+    "statik": true,
+    "dinamik": true,
+    "kaynak": "desing/data | /api/portal/ben (cf-worker üye portalı)"
+  }
+}

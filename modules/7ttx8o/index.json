@@ -1,0 +1,17 @@
+{
+  "name": "Menü 2",
+  "desing": {
+    "logo": "{{logo}}",
+    "color": "#1e3046",
+    "max": "1200px",
+    "height": "100px",
+    "button": "var(--mx-site-primary, #2563eb)"
+  },
+  "category": "menu",
+  "description": "Responsive web sitesi navigasyon menüsü. Logo, sayfa linkleri ve mobil uyumlu hamburger menü içerir.  web sitelerinde 1 projede kullanılır.",
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data"
+  }
+}
