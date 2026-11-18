@@ -3,17 +3,23 @@
   "name": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "description": {
     "tr": "Misyonumuz",
     "en": "Our mission",
-    "ar": "مهمتنا"
+    "ar": "مهمتنا",
+    "de": "Unsere Mission",
+    "ru": "Наша миссия"
   },
   "keyword": {
     "tr": "Misyon",
     "en": "mission, our mission, corporate responsibility",
-    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية"
+    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "path": "misyon",
   "icon": "flag",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Misyonumuz</h2>\n<p>Her ziyareti zamanında, temiz ve konuşarak planlanmış bir deneyime dönüştürmek.</p>",
     "en": "<h2>Our mission</h2>\n<p>To turn every visit into a punctual, clean and well-discussed experience.</p>",
-    "ar": "<h2>مهمتنا</h2>\n<p>أن نجعل كل زيارة تجربة منظمة في وقتها ونظيفة ومخططًا لها بالحوار.</p>"
+    "ar": "<h2>مهمتنا</h2>\n<p>أن نجعل كل زيارة تجربة منظمة في وقتها ونظيفة ومخططًا لها بالحوار.</p>",
+    "de": "<h2>Unsere Mission</h2>\n<p>Jeden Besuch in ein pünktliches, sauberes und gut geplantes Erlebnis verwandeln.</p>",
+    "ru": "<h2>Наша миссия</h2>\n<p>Превращать каждый визит в пунктуальный, чистый и хорошо спланированный опыт.</p>"
   },
   "title": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "date": "2026-11-16T11:38:05.634Z",
   "update": "2026-11-16T12:20:31.267Z",

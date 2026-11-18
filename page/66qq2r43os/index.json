@@ -3,17 +3,23 @@
   "name": {
     "tr": "Hizmetlerimiz",
     "en": "Our services",
-    "ar": "خدماتنا"
+    "ar": "خدماتنا",
+    "de": "Unsere Dienste",
+    "ru": "Наши услуги"
   },
   "description": {
     "tr": "Süreler saç boyuna ve yoğunluğuna göre değişir; fiyat bilgisi randevu sırasında verilir.",
     "en": "Durations depend on hair length and thickness; prices are shared when you book.",
-    "ar": "تختلف المدة حسب طول الشعر وكثافته؛ وتُقدَّم الأسعار عند الحجز."
+    "ar": "تختلف المدة حسب طول الشعر وكثافته؛ وتُقدَّم الأسعار عند الحجز.",
+    "de": "Die Dauer variiert je nach Haarlänge und -dichte; Preisauskunft gibt es bei der Terminvereinbarung.",
+    "ru": "Время зависит от длины и густоты волос; стоимость сообщается при записи."
   },
   "keyword": {
     "tr": "Hizmetler",
     "en": "Services",
-    "ar": "الخدمات"
+    "ar": "الخدمات",
+    "de": "Leistungen",
+    "ru": "Услуги"
   },
   "path": "hizmetler",
   "icon": "work",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Hizmetlerimiz",
     "en": "Our services",
-    "ar": "خدماتنا"
+    "ar": "خدماتنا",
+    "de": "Unsere Dienste",
+    "ru": "Наши услуги"
   },
   "date": "2026-11-16T11:38:05.777Z",
   "update": "2026-11-16T12:20:31.247Z"

@@ -5,12 +5,16 @@
       "name": {
         "tr": "Hizmetlerimiz",
         "en": "Our services",
-        "ar": "خدماتنا"
+        "ar": "خدماتنا",
+        "de": "Unsere Dienste",
+        "ru": "Наши услуги"
       },
       "description": {
         "tr": "Süreler saç boyuna ve yoğunluğuna göre değişir; fiyat bilgisi randevu sırasında verilir.",
         "en": "Durations depend on hair length and thickness; prices are shared when you book.",
-        "ar": "تختلف المدة حسب طول الشعر وكثافته؛ وتُقدَّم الأسعار عند الحجز."
+        "ar": "تختلف المدة حسب طول الشعر وكثافته؛ وتُقدَّم الأسعار عند الحجز.",
+        "de": "Die Dauer variiert je nach Haarlänge und -dichte; Preisauskunft gibt es bei der Terminvereinbarung.",
+        "ru": "Время зависит от длины и густоты волос; стоимость сообщается при записи."
       },
       "path": "hizmetler",
       "icon": "work",
@@ -30,7 +34,9 @@
       "name": {
         "tr": "Salonumuz",
         "en": "Our salon",
-        "ar": "صالوننا"
+        "ar": "صالوننا",
+        "de": "Unser Salon",
+        "ru": "Наш салон"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -52,7 +58,9 @@
       "description": {
         "tr": "Puanlarımız, müşteri deneyimleri ve kullandığımız markalar (kurgusal).",
         "en": "Our ratings, client experiences and the brands we use (fictional).",
-        "ar": "تقييماتنا وتجارب العملاء والعلامات التي نستخدمها (افتراضية)."
+        "ar": "تقييماتنا وتجارب العملاء والعلامات التي نستخدمها (افتراضية).",
+        "de": "Unsere Bewertungen, Kundenerfahrungen und die Marken, die wir verwenden (fiktiv).",
+        "ru": "Наши оценки, опыт клиентов и бренды, которые мы используем (условные)."
       }
     },
     {
@@ -60,12 +68,16 @@
       "name": {
         "tr": "Stilistler",
         "en": "Stylists",
-        "ar": "المصففون"
+        "ar": "المصففون",
+        "de": "Stylisten",
+        "ru": "Стилисты"
       },
       "description": {
         "tr": "Sizi karşılayan çalışanlarımız.",
         "en": "The staff who welcomes you.",
-        "ar": "الموظفون الذين يستقبلونكم."
+        "ar": "الموظفون الذين يستقبلونكم.",
+        "de": "Unsere Mitarbeiter, die Sie empfangen.",
+        "ru": "Наши сотрудники, которые вас встретят."
       },
       "path": "ekip",
       "icon": "groups",
@@ -86,12 +98,16 @@
       "name": {
         "tr": "Ziyaret rehberi",
         "en": "Visit guide",
-        "ar": "دليل الزيارة"
+        "ar": "دليل الزيارة",
+        "de": "Besuch",
+        "ru": "Посещение"
       },
       "description": {
         "tr": "Merak edilenler ve kısa yanıtlar.",
         "en": "Common questions and short answers.",
-        "ar": "أسئلة متكررة وإجابات موجزة."
+        "ar": "أسئلة متكررة وإجابات موجزة.",
+        "de": "Was Sie wissen möchten, in kurzen Antworten.",
+        "ru": "Что интересует читателей — в коротких ответах."
       },
       "path": "sorular",
       "icon": "help",
@@ -112,12 +128,16 @@
       "name": {
         "tr": "Randevu",
         "en": "Booking",
-        "ar": "الحجز"
+        "ar": "الحجز",
+        "de": "Termin",
+        "ru": "Запись"
       },
       "description": {
         "tr": "Randevu ve özel danışma talebi (demo).",
         "en": "Booking and private consultation request (demo).",
-        "ar": "طلب حجز واستشارة خاصة (تجريبي)."
+        "ar": "طلب حجز واستشارة خاصة (تجريبي).",
+        "de": "Termin- und Sonderberatungsanfrage (Demo).",
+        "ru": "Заявка на запись и особую консультацию (демо)."
       },
       "path": "teklif-al",
       "icon": "request_quote",
@@ -137,7 +157,9 @@
       "name": {
         "tr": "İletişim",
         "en": "Contact",
-        "ar": "اتصل بنا"
+        "ar": "اتصل بنا",
+        "de": "Kontakt",
+        "ru": "Контакты"
       },
       "status": "play",
       "id": "iletisim",
@@ -158,7 +180,9 @@
       "description": {
         "tr": "Adres, telefon ve çalışma saatleri.",
         "en": "Address, phone and opening hours.",
-        "ar": "العنوان والهاتف وساعات العمل."
+        "ar": "العنوان والهاتف وساعات العمل.",
+        "de": "Adresse, Telefon und Öffnungszeiten.",
+        "ru": "Адрес, телефон и часы работы."
       }
     }
   ],

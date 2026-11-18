@@ -3,17 +3,23 @@
   "name": {
     "tr": "Kalite Politikamız",
     "en": "Quality Policy",
-    "ar": "سياسة الجودة"
+    "ar": "سياسة الجودة",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "description": {
     "tr": "Kalite politikamız",
     "en": "Our quality policy",
-    "ar": "سياسة الجودة لدينا"
+    "ar": "سياسة الجودة لدينا",
+    "de": "Unsere Qualitätspolitik",
+    "ru": "Наша политика качества"
   },
   "keyword": {
     "tr": "Kalite Politikamız",
     "en": "quality policy, quality, continuous improvement",
-    "ar": "سياسة الجودة, الجودة, التحسين المستمر"
+    "ar": "سياسة الجودة, الجودة, التحسين المستمر",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "path": "kalitepolitikamiz",
   "icon": "verified",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Kalite Politikamız</h2>\n<p>Tek kullanımlık havlu, her müşteriden sonra temizlenen ekipman ve açık rızayla fotoğraf.</p>",
     "en": "<h2>Our quality policy</h2>\n<p>Single-use towels, equipment cleaned after every client and photos only with explicit consent.</p>",
-    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>مناشف للاستعمال مرة واحدة، وأدوات تُنظَّف بعد كل عميل، وصور بموافقة صريحة فقط.</p>"
+    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>مناشف للاستعمال مرة واحدة، وأدوات تُنظَّف بعد كل عميل، وصور بموافقة صريحة فقط.</p>",
+    "de": "<h2>Unsere Qualitätspolitik</h2>\n<p>Einweghandtücher, nach jedem Kunden gereinigte Geräte und Fotos nur mit ausdrücklicher Einwilligung.</p>",
+    "ru": "<h2>Наша политика качества</h2>\n<p>Одноразовые полотенца, оборудование, очищаемое после каждого клиента, и фотографии только с явного согласия.</p>"
   },
   "title": {
     "tr": "Kalite Politikamız",
     "en": "Quality Policy",
-    "ar": "سياسة الجودة"
+    "ar": "سياسة الجودة",
+    "de": "Qualitätspolitik",
+    "ru": "Политика качества"
   },
   "date": "2026-11-16T11:38:05.634Z",
   "update": "2026-11-16T12:20:31.269Z",
