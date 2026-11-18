@@ -2,7 +2,9 @@
   "name": {
     "tr": "Salonumuz",
     "en": "Our salon",
-    "ar": "صالوننا"
+    "ar": "صالوننا",
+    "de": "Unser Salon",
+    "ru": "Наш салон"
   },
   "status": "play",
   "category": "",
@@ -24,7 +26,9 @@
   "description": {
     "tr": "Puanlarımız, müşteri deneyimleri ve kullandığımız markalar (kurgusal).",
     "en": "Our ratings, client experiences and the brands we use (fictional).",
-    "ar": "تقييماتنا وتجارب العملاء والعلامات التي نستخدمها (افتراضية)."
+    "ar": "تقييماتنا وتجارب العملاء والعلامات التي نستخدمها (افتراضية).",
+    "de": "Unsere Bewertungen, Kundenerfahrungen und die Marken, die wir verwenden (fiktiv).",
+    "ru": "Наши оценки, опыт клиентов и бренды, которые мы используем (условные)."
   },
   "spot": {
     "tr": "",
@@ -35,12 +39,16 @@
   "title": {
     "tr": "Salonumuz",
     "en": "Our salon",
-    "ar": "صالوننا"
+    "ar": "صالوننا",
+    "de": "Unser Salon",
+    "ru": "Наш салон"
   },
   "keyword": {
     "tr": "hakkımızda",
     "en": "about",
-    "ar": "من نحن"
+    "ar": "من نحن",
+    "de": "Über uns",
+    "ru": "О нас"
   },
   "text": {},
   "update": "2026-11-16T12:20:31.250Z",

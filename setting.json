@@ -4,12 +4,16 @@
   "description": {
     "tr": "Lina Saç Stüdyosu: kesim, renk, örgü ve gelin saçı için çevrim içi randevu. Demo site; içerik kurgusaldır.",
     "en": "Lina Hair Studio: online booking for cuts, colour, braids and bridal hair. Demo site; content is fictional.",
-    "ar": "استوديو لينا للشعر: حجز عبر الإنترنت للقص والصبغ والضفائر وتسريحات العرائس. موقع تجريبي؛ المحتوى افتراضي."
+    "ar": "استوديو لينا للشعر: حجز عبر الإنترنت للقص والصبغ والضفائر وتسريحات العرائس. موقع تجريبي؛ المحتوى افتراضي.",
+    "de": "Lina Saç Stüdyosu: Online-Termine für Schnitt, Farbe, Flechtfrisuren und Brautfrisur. Demo-Website; der Inhalt ist fiktiv.",
+    "ru": "Lina Saç Stüdyosu: онлайн-запись на стрижку, окрашивание, плетение и свадебную причёску. Демо-сайт; содержание вымышлено."
   },
   "keyword": {
     "tr": "kuaför, saç kesimi, saç boyama, gelin saçı, randevu",
     "en": "hair salon, haircut, hair colour, bridal hair, booking",
-    "ar": "صالون شعر، قص الشعر، صبغ الشعر، تسريحة عروس، حجز"
+    "ar": "صالون شعر، قص الشعر، صبغ الشعر، تسريحة عروس، حجز",
+    "de": "Friseur, Haarschnitt, Haarfärbung, Brautfrisur, Termin",
+    "ru": "парикмахерская, стрижка, окрашивание, свадебная причёска, запись"
   },
   "category": "Kurumsal",
   "name": "Lina Saç Stüdyosu",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

@@ -3,17 +3,23 @@
   "name": {
     "tr": "Randevu",
     "en": "Booking",
-    "ar": "الحجز"
+    "ar": "الحجز",
+    "de": "Termin",
+    "ru": "Запись"
   },
   "description": {
     "tr": "Randevu ve özel danışma talebi (demo).",
     "en": "Booking and private consultation request (demo).",
-    "ar": "طلب حجز واستشارة خاصة (تجريبي)."
+    "ar": "طلب حجز واستشارة خاصة (تجريبي).",
+    "de": "Termin- und Sonderberatungsanfrage (Demo).",
+    "ru": "Заявка на запись и особую консультацию (демо)."
   },
   "keyword": {
     "tr": "randevu, gelin saçı",
     "en": "booking, bridal hair",
-    "ar": "حجز، تسريحة عروس"
+    "ar": "حجز، تسريحة عروس",
+    "de": "Termin, Brautfrisur",
+    "ru": "запись, свадебная причёска"
   },
   "path": "teklif-al",
   "icon": "request_quote",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Randevu",
     "en": "Booking",
-    "ar": "الحجز"
+    "ar": "الحجز",
+    "de": "Termin",
+    "ru": "Запись"
   },
   "date": "2026-11-16T11:38:05.795Z",
   "update": "2026-11-16T12:20:31.260Z"

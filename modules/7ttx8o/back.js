@@ -8,7 +8,7 @@ if (pagesettingjson) {
   for (var p of webmakerdata[pagesettingjson.path].data) {
     if (p.status == "play" && p.category == "") {
       backhtml += `<a href="${wxLangInternalHref(p.path)}">${
-        p.name[json.lang]
+        wmPickLang(p.name, json.lang)
       }</a>`;
     }
   }
